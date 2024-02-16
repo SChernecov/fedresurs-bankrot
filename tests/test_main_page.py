@@ -12,8 +12,8 @@ class TestMainPage(BaseTest):
             f"Incorrect browser title:{self.main_page.title}"
 
 
-@allure.feature("Test footer")
-class TestFooter(BaseTest):
+@allure.feature("Test header")
+class TestHeader(BaseTest):
 
     def test_navigate_to_fedresurs(self):
         """ Navigate to Fedresurs """
