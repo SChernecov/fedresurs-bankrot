@@ -27,7 +27,6 @@ services:
     ports:
       - "4444:4444"
    
-  
   tests:
     tty: true
     build: .
@@ -35,7 +34,7 @@ services:
     command:
       - '/bin/sh'
       - '-c'
-      - '/bin/sleep 30 && pytest tests/test_main_page.py -s -l -v --browser=chrome -n=1 --alluredir=allure-results --url=https://bankrot.fedresurs.ru/'
+      - '/bin/sleep 30 && pytest tests/test_main_page.py -s -l -v --browser=chrome --remote=selenoid --max --vnc -n=1 --alluredir=allure-results --url=https://bankrot.fedresurs.ru/'
     depends_on:
       - selenoid
     volumes:
